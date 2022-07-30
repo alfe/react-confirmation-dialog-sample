@@ -7,6 +7,7 @@ import ConfirmationDialog from './ConfirmationDialog';
 export type DeleteButtonWithConfirmProps = {
   onSubmit: () => void;
   tooltip: string;
+  confirmTitle?: string;
   confirmText: string;
 };
 const DeleteButtonWithConfirm = (props: DeleteButtonWithConfirmProps) => {
@@ -26,6 +27,7 @@ const DeleteButtonWithConfirm = (props: DeleteButtonWithConfirmProps) => {
       </Tooltip>
       <ConfirmationDialog
         open={open}
+        title={props.confirmTitle}
         onClose={() => setOpen(false)}
         onApprove={handleSubmit}>
         {props.confirmText}

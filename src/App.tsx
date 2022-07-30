@@ -8,16 +8,15 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Box>
-          <span>{text}</span>
-          <DeleteButtonWithConfirm
-            tooltip="削除"
-            confirmText="削除しますか？"
-            onSubmit={() => setText('')}
-          />
-        </Box>
-      </header>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <span>{text}</span>
+        <DeleteButtonWithConfirm
+          tooltip="削除"
+          confirmTitle="削除確認"
+          confirmText="対象の文字列を削除しますか？"
+          onSubmit={() => setText('')}
+        />
+      </Box>
     </div>
   )
 }
