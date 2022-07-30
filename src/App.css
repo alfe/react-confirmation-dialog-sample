@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 48px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,3 +9,9 @@
   color: #333;
 }
 
+.App-footer {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
